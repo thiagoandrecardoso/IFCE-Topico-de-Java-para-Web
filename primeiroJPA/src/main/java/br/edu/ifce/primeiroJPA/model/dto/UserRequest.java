@@ -5,6 +5,8 @@ import br.edu.ifce.primeiroJPA.model.User;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Collection;
+
 @Getter
 @Setter
 public class UserRequest {
@@ -12,8 +14,9 @@ public class UserRequest {
     private String email;
     private String password;
     private Address address;
+    private Collection<String> phones;
 
     public User toMOdel(){
-        return new User(name, email, password, address);
+        return new User(name, email, password, address, phones);
     }
 }
