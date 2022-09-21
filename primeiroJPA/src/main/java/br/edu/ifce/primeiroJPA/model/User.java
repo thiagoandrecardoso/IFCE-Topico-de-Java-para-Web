@@ -20,10 +20,13 @@ public class User {
     @Column(length = 140)
     private String email;
     private String password;
+    @Embedded
+    private Address address;
 
-    public User(String name, String email, String password) {
+    public User(String name, String email, String password, Address address) {
         this.name = name;
         this.email = email;
         this.password = password;
+        this.address = address;
     }
 }
